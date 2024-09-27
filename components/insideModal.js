@@ -10,7 +10,9 @@ export const InsideModal = styled(Frame)`
 `;
 export const InstructionModal = styled(Frame)`
   text-align: center;
-  height: 100%;
+  /* height: 100%; */
   box-shadow: none;
   overflow: hidden;
+  max-height: 100vh; /* Evita que ocupe más que la altura de la ventana */
+  overflow-y: auto; /* Permite el scroll si el contenido es más largo */
 `;

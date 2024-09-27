@@ -29,6 +29,9 @@ import { Spotify } from "../components/folders/spotify";
 import { AboutUS } from "../components/folders/aboutus";
 import { Info } from "../components/folders/info";
 import {
+  HeroStyled,
+  HeroSubtitle,
+  HeroTitle,
   IntructionBackground,
   IntructionSubtitle,
   IntructionTitle,
@@ -259,10 +262,15 @@ export default function Home() {
             ]}
           >
             <InstructionModal boxShadow="out" ref={ref}>
+              <HeroStyled>
+                <LogoIcon color={"#fff"} />
+                <HeroTitle>Macarena & Víctor</HeroTitle>
+                <HeroSubtitle>03.05.25</HeroSubtitle>
+              </HeroStyled>
               <IntructionBackground>
                 <LogoIcon color={"#000"} />
                 {/* Titulo */}
-                <IntructionTitle>MACARENA & VICTOR</IntructionTitle>
+                <IntructionTitle>Macarena & Víctor</IntructionTitle>
                 <IntructionSubtitle>
                   Cieza. 03 Mayo 2025 - 13:30
                 </IntructionSubtitle>
