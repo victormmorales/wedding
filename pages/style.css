@@ -115,10 +115,11 @@ div.flip-clock {
   --fcc-digit-block-width: 40px; /* width of digit card */
   --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
   --fcc-digit-font-size: 40px; /* font size of digit */
-  --fcc-digit-color: white; /* color of digit */
+  --fcc-digit-color: #dd9476; /* color of digit */
   --fcc-label-font-size: 16px; /* font size of label */
-  --fcc-label-color: black; /* color of label */
-  --fcc-background: #8fb0a9; /* background of digit card */
+  --fcc-label-color: #fff; /* color of label */
+  /* --fcc-background: #8fb0a9; */
+  --fcc-background: #fff; /* background of digit card */
   --fcc-divider-color: hsla(0, 0%, 100%, 0.4); /* color of divider */
   --fcc-divider-height: 1px; /* height of divider */
   width: fit-content;

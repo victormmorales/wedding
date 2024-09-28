@@ -17,6 +17,7 @@ import {
   User5,
   Write1,
 } from "@react95/icons";
+import { useInView } from "react-intersection-observer";
 import {} from "../utils/image";
 import { TASKBAR_HEIGHT } from "../utils/constants";
 import { isMobileDevice } from "../utils/mobile";
@@ -29,12 +30,21 @@ import { Spotify } from "../components/folders/spotify";
 import { AboutUS } from "../components/folders/aboutus";
 import { Info } from "../components/folders/info";
 import {
+  CiezaContainer,
+  CiezaText,
+  CiezaWallpaper,
+  CuentaAtrasContainer,
+  DescriptionContainer,
+  DescriptionSubtitle,
   HeroStyled,
   HeroSubtitle,
   HeroTitle,
   IntructionBackground,
   IntructionSubtitle,
   IntructionTitle,
+  Separator,
+  Text,
+  Title,
 } from "../utils/ui";
 import LogoIcon from "../components/icons/logo";
 
@@ -50,7 +60,7 @@ export default function Home() {
     setIsClient(true);
   }, []);
 
-  const ref = useRef(null);
+  const refCasamiento = useRef(null);
   const overflowRef = useRef(null);
 
   useEffect(() => {
@@ -68,8 +78,9 @@ export default function Home() {
   const [showCasamentoModal, setShowCasamentoModal] = useState(true);
 
   useEffect(() => {
-    if (ref.current != null) ref.current.parentElement.style.overflow = "auto";
-  }, [ref.current, showCasamentoModal]);
+    if (refCasamiento.current != null)
+      refCasamiento.current.parentElement.style.overflow = "auto";
+  }, [refCasamiento.current, showCasamentoModal]);
 
   const handleOpenCasamentoModal = useCallback(() => {
     setShowCasamentoModal(true);
@@ -261,12 +272,86 @@ export default function Home() {
               },
             ]}
           >
-            <InstructionModal boxShadow="out" ref={ref}>
+            <InstructionModal boxShadow="out" ref={refCasamiento}>
               <HeroStyled>
                 <LogoIcon color={"#fff"} />
                 <HeroTitle>Macarena & Víctor</HeroTitle>
                 <HeroSubtitle>03.05.25</HeroSubtitle>
               </HeroStyled>
+
+              <DescriptionContainer>
+                <Separator height="50px" />
+                <Title color="#000">¡Nos casamos!</Title>
+                <Text color="#000">
+                  Después de 5 años de noviazgo y una hija... 🐶 ¡Creemos que ha
+                  llegado el momento de dar el paso!
+                </Text>
+                <Text color="#000">
+                  Contamos con cada uno de vosotros para celebrar este día y
+                  marcar el inicio de esta nueva etapa de nuestra vida. ¡El día
+                  promete estar lleno de buena comida, mucha bebida y sobretodo
+                  buen rollo para celebrarlo por todo lo alto!
+                </Text>
+                <Separator height="50px" />
+              </DescriptionContainer>
+
+              <CuentaAtrasContainer>
+                <DescriptionSubtitle color="#fff">
+                  Sólo falta
+                </DescriptionSubtitle>
+                <Separator height="30px" />
+                {isClient && (
+                  <FlipClockCountdown
+                    to={"2025-05-03T13:30:00.635Z"}
+                    labels={["DIAS", "HORAS", "MINUTOS", "SEGUNDOS"]}
+                    className="flip-clock"
+                  />
+                )}
+                <Separator height="30px" />
+              </CuentaAtrasContainer>
+
+              <CiezaContainer>
+                {isMobile ? (
+                  <img
+                    className="image-center"
+                    src={"/image/cieza.jpg"}
+                    alt="Cieza"
+                  />
+                ) : (
+                  <CiezaWallpaper />
+                )}
+                <CiezaText>
+                  <DescriptionSubtitle color="#000">
+                    ¡Nos casamos en Cieza!
+                  </DescriptionSubtitle>
+                  <Text color="#000">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean tincidunt eu ipsum quis ultrices. Phasellus ac
+                    placerat leo. Nam eu turpis nec augue viverra varius sit
+                    amet vel leo. Etiam vel vulputate arcu. Sed in dapibus
+                    magna. Cras laoreet lectus vel ligula vehicula congue. Nulla
+                    tempus lacus sapien, a cursus justo pretium quis.
+                  </Text>
+                </CiezaText>
+              </CiezaContainer>
+
+              <div>
+                <IntructionSubtitle>Lugar y horario</IntructionSubtitle>
+                <p>Horario de llegada - 13:00</p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.83498078433!2d-1.4299827241927086!3d38.23693638540377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd646c16e3c2585d%3A0x9a61cb2204caa679!2sParroquia%20Ntra.%20Sra.%20de%20La%20Asunci%C3%B3n.%20Cieza!5e0!3m2!1ses!2ses!4v1716379300966!5m2!1ses!2ses"
+                  width={isMobile ? "210" : "400"}
+                  height="300"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <p>Parroquia Ntra. Sra. de La Asunción. Cieza</p>
+                <br />
+                <br />
+              </div>
+
+              {/* OLD SECTION */}
               <IntructionBackground>
                 <LogoIcon color={"#000"} />
                 {/* Titulo */}
@@ -282,18 +367,6 @@ export default function Home() {
                   src={"/image/macayvictor.png"}
                   alt="Maca y Víctor"
                 />
-                <br />
-                <IntructionSubtitle>¡Que nos casamos!</IntructionSubtitle>
-                <p>
-                  Después de unos cuantos añitos de novios... ha llegado la hora
-                  de dar el paso 🧡
-                </p>
-                <p>
-                  Contamos con cada uno de vosotros para celebrar esta historia
-                  y marcar el inicio de esta nueva fase nuestra. ¡El día promete
-                  estar lleno de buena comida, mucha bebida y sobretodo buen
-                  rollo para celebrarlo por todo lo alto!
-                </p>
                 <br />
                 <IntructionSubtitle>Sólo falta:</IntructionSubtitle>
                 {isClient && (
