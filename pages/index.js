@@ -335,9 +335,17 @@ export default function Home() {
                 </CiezaText>
               </CiezaContainer>
 
-              <div>
-                <IntructionSubtitle>Lugar y horario</IntructionSubtitle>
-                <p>Horario de llegada - 13:00</p>
+              <div
+                style={{
+                  background: "#fff",
+                  padding: "20px 10px",
+                  paddingTop: "50px",
+                }}
+              >
+                <DescriptionSubtitle color="#000">
+                  Lugar y horario
+                </DescriptionSubtitle>
+                <Text color="#000">Horario de llegada - 13:00</Text>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.83498078433!2d-1.4299827241927086!3d38.23693638540377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd646c16e3c2585d%3A0x9a61cb2204caa679!2sParroquia%20Ntra.%20Sra.%20de%20La%20Asunci%C3%B3n.%20Cieza!5e0!3m2!1ses!2ses!4v1716379300966!5m2!1ses!2ses"
                   width={isMobile ? "210" : "400"}
@@ -346,7 +354,9 @@ export default function Home() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-                <p>Parroquia Ntra. Sra. de La Asunción. Cieza</p>
+                <Text color="#000">
+                  Parroquia Ntra. Sra. de La Asunción. Cieza
+                </Text>
                 <br />
                 <br />
               </div>
