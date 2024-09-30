@@ -24,6 +24,7 @@ export const HeroStyled = styled.div`
   text-align: center;
   color: #f3f3e5;
   animation: ${fadeIn} 1s ease-in-out;
+  padding-top: 150px;
 `;
 
 export const HeroTitle = styled.h1`
@@ -44,7 +45,7 @@ export const HeroSubtitle = styled.h2`
   font-size: 1.2rem;
   text-align: center;
   margin-top: -5px;
-  margin-bottom: 150px;
+  /* margin-bottom: 150px; */
 `;
 
 export const Separator = styled.div`
@@ -72,7 +73,8 @@ export const Text = styled.p`
 
 /* dd9476 */
 export const DescriptionContainer = styled.div`
-  background-color: #f6f6ec;
+  /* background-color: #f6f6ec; */
+  background-color: ${(props) => props.background};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,6 +138,40 @@ export const CiezaWallpaper = styled.div`
 
 export const CiezaText = styled.div`
   padding: 100px 50px;
+  padding-bottom: 70px;
+`;
+
+export const UbicacionTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  flex-direction: row;
+`;
+
+export const UbicacionContainer = styled.div`
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 72px 20px 0;
+  border-right: 1px solid #6b6b6b;
+`;
+
+export const CityContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0 20px 72px;
+`;
+
+export const VideoContainer = styled.div`
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  height: "100vh";
+  width: "100%";
 `;
 
 // OLD ---------------------------------------------------

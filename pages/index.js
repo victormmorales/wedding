@@ -33,6 +33,7 @@ import {
   CiezaContainer,
   CiezaText,
   CiezaWallpaper,
+  CityContainer,
   CuentaAtrasContainer,
   DescriptionContainer,
   DescriptionSubtitle,
@@ -45,8 +46,11 @@ import {
   Separator,
   Text,
   Title,
+  UbicacionContainer,
+  UbicacionTitle,
 } from "../utils/ui";
 import LogoIcon from "../components/icons/logo";
+import { right } from "@xstyled/styled-components";
 
 export default function Home() {
   /* Spotify Modal */
@@ -279,14 +283,14 @@ export default function Home() {
                 <HeroSubtitle>03.05.25</HeroSubtitle>
               </HeroStyled>
 
-              <DescriptionContainer>
+              <DescriptionContainer background="#f6f6ec">
                 <Separator height="50px" />
                 <Title color="#000">¡Nos casamos!</Title>
-                <Text color="#000">
+                <Text color="#6b6b6b">
                   Después de 5 años de noviazgo y una hija... 🐶 ¡Creemos que ha
                   llegado el momento de dar el paso!
                 </Text>
-                <Text color="#000">
+                <Text color="#6b6b6b">
                   Contamos con cada uno de vosotros para celebrar este día y
                   marcar el inicio de esta nueva etapa de nuestra vida. ¡El día
                   promete estar lleno de buena comida, mucha bebida y sobretodo
@@ -321,160 +325,94 @@ export default function Home() {
                   <CiezaWallpaper />
                 )}
                 <CiezaText>
-                  <DescriptionSubtitle color="#000">
+                  <DescriptionSubtitle color="#000" style={{ fontWeight: 700 }}>
                     ¡Nos casamos en Cieza!
                   </DescriptionSubtitle>
-                  <Text color="#000">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean tincidunt eu ipsum quis ultrices. Phasellus ac
-                    placerat leo. Nam eu turpis nec augue viverra varius sit
-                    amet vel leo. Etiam vel vulputate arcu. Sed in dapibus
-                    magna. Cras laoreet lectus vel ligula vehicula congue. Nulla
-                    tempus lacus sapien, a cursus justo pretium quis.
+                  <Text color="#6b6b6b">
+                    ¿Que no sabéis donde esta Cieza? Está en Murcia. Le llaman
+                    la perla del Segura. Se encuentra en un valle atreavesada
+                    por el río, rodeada de frutales, entre ellos el melocotonero
+                    (Por cierto tenéis que probar el melocotón de Cieza 🍑).
                   </Text>
+                  <Text color="#6b6b6b">
+                    Es el pueblo de origen de Maca y el mío por adopción... y
+                    como nos tratan muy bien hemos decidido que era el mejor
+                    sitio para celebrar nuestra boda.
+                  </Text>
+                  {/* <Text color="#000">
+                    Téneis un motón de actividades que podéis realizar y que el
+                    entorno permite: senderismo por su atalaya, hacer footing o
+                    andar por el paseo ribereño y muchas más a cosas que os
+                    vamos a contar 😉.
+                  </Text> */}
                 </CiezaText>
               </CiezaContainer>
 
-              <div
-                style={{
-                  background: "#fff",
-                  padding: "20px 10px",
-                  paddingTop: "50px",
-                }}
-              >
-                <DescriptionSubtitle color="#000">
-                  Lugar y horario
-                </DescriptionSubtitle>
-                <Text color="#000">Horario de llegada - 13:00</Text>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.83498078433!2d-1.4299827241927086!3d38.23693638540377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd646c16e3c2585d%3A0x9a61cb2204caa679!2sParroquia%20Ntra.%20Sra.%20de%20La%20Asunci%C3%B3n.%20Cieza!5e0!3m2!1ses!2ses!4v1716379300966!5m2!1ses!2ses"
-                  width={isMobile ? "210" : "400"}
-                  height="300"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-                <Text color="#000">
+              <DescriptionContainer background="#fff">
+                <UbicacionTitle>
+                  <UbicacionContainer>
+                    <Text color="#6b6b6b">MAYO</Text>
+                    <Text color="#6b6b6b">03, 2025</Text>
+                  </UbicacionContainer>
+                  <CityContainer>
+                    <Text color="#6b6b6b">CIEZA</Text>
+                    <Text color="#6b6b6b">MURCIA</Text>
+                  </CityContainer>
+                </UbicacionTitle>
+                <Separator height="20px" />
+                <Text color="#6b6b6b">Horario de llegada - 13:00</Text>
+                <Text color="#6b6b6b">
                   Parroquia Ntra. Sra. de La Asunción. Cieza
                 </Text>
-                <br />
-                <br />
-              </div>
-
-              {/* OLD SECTION */}
-              <IntructionBackground>
-                <LogoIcon color={"#000"} />
-                {/* Titulo */}
-                <IntructionTitle>Macarena & Víctor</IntructionTitle>
-                <IntructionSubtitle>
-                  Cieza. 03 Mayo 2025 - 13:30
-                </IntructionSubtitle>
-                <div className="hero"></div>
-                <br />
-                <br />
-                <img
-                  className="image-center"
-                  src={"/image/macayvictor.png"}
-                  alt="Maca y Víctor"
-                />
-                <br />
-                <IntructionSubtitle>Sólo falta:</IntructionSubtitle>
-                {isClient && (
-                  <FlipClockCountdown
-                    to={"2025-05-03T13:30:00.635Z"}
-                    labels={["DIAS", "HORAS", "MINUTOS", "SEGUNDOS"]}
-                    className="flip-clock"
-                  />
-                )}
-                <br />
-                <br />
-                <IntructionSubtitle>Lugar y horario</IntructionSubtitle>
-                <p>Horario de llegada - 13:00</p>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.83498078433!2d-1.4299827241927086!3d38.23693638540377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd646c16e3c2585d%3A0x9a61cb2204caa679!2sParroquia%20Ntra.%20Sra.%20de%20La%20Asunci%C3%B3n.%20Cieza!5e0!3m2!1ses!2ses!4v1716379300966!5m2!1ses!2ses"
-                  width={isMobile ? "210" : "400"}
-                  height="300"
+                  width={isMobile ? "280" : "800"}
+                  height="400"
                   style={{ border: 0 }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-                <p>Parroquia Ntra. Sra. de La Asunción. Cieza</p>
-                <br />
-                <br />
-                {/* <IntructionSubtitle>Lista de Presentes</IntructionSubtitle> */}
-                {/* <p>
-                  Temos duas formas de enviar presente, uma é a lista de
-                  presente que é só clicar no ícone abaixo para ter acesso e a
-                  outra é enviar um PIX com uma mensagem bem legal pra gente
-                </p> */}
-                <br />
-                <br />
-                {/* <p>
-                  <a
-                    href="https://noivos.casar.com/specicampos#/presentes"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="icons"
-                      src={"/image/gift.png"}
-                      alt="Lista de presente"
-                    />
-                    Lista de presentes do casar.com
-                  </a>
-                </p> */}
-                <br />
-                <br />
-                {/* <a href="https://nubank.com.br/pagar/48wth/mGWKfQeR5q">
-                  <img
-                    className="image-center"
-                    src={"/image/qrcode-pix.png"}
-                    alt="QrCode do Pix"
-                    href="https://nubank.com.br/pagar/48wth/mGWKfQeR5q"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                  Clique aqui
-                </a> */}
-                {/* <p>Chave-pix: 97241cba-c833-4fae-bab8-dc2860245083</p> */}
-                <br />
-                <br />
-                <p>¿Dudas sobre el dresscode?</p>
-                <img
-                  className="icons"
-                  src={"/image/megaphone.png"}
-                  alt="Prestenção"
-                  onClick={handleOpenInformacoesModal}
-                />
-                {/* <div>
-                  <br />
-                  <br />
-                  <h2>Compartilhe!</h2>
-                  <a onClick={share}>
-                    <img
-                      className="heart"
-                      src={"/image/whatsapp_pixel.png"}
-                      alt="ZAP"
-                    />
-                  </a>
-                </div> */}
+                <Separator height="50px" />
+              </DescriptionContainer>
 
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <p>holi</p>
-              </IntructionBackground>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%", // Ocupa el 100% de la altura del viewport
+                  width: "100%", // Ocupa el 100% del ancho disponible
+                  background: "#dd9476",
+                  // background: "#f6f6ec",
+                }}
+              >
+                <div
+                  style={{
+                    position: "relative",
+                    paddingBottom: "56.25%", // Relación de aspecto 16:9
+                    width: "80%", // Ocupará el 80% del ancho del contenedor padre
+                    borderRadius: "8px", // Borde redondeado
+                    overflow: "hidden", // Para que los bordes redondeados afecten el video
+                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)", // Sombra opcional para un mejor efecto visual
+                  }}
+                >
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/aCVHOoY219w"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  ></iframe>
+                </div>
+              </div>
             </InstructionModal>
           </Modal>
         )}
