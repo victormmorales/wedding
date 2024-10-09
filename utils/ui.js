@@ -115,7 +115,7 @@ export const CiezaContainer = styled.div`
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  /* gap: 20px; */
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
@@ -139,6 +139,7 @@ export const CiezaWallpaper = styled.div`
 export const CiezaText = styled.div`
   padding: 100px 50px;
   padding-bottom: 70px;
+  min-height: 50vh;
 `;
 
 export const UbicacionTitle = styled.div`
@@ -166,12 +167,91 @@ export const CityContainer = styled.div`
   padding: 20px 0 20px 72px;
 `;
 
+export const ButtonStyled = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  background-color: ${(props) =>
+    props.background ? props.background : "#fff"};
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    min-height: 10vh;
+    padding: 10px;
+  }
+`;
+
+export const ButtonRedirect = styled.div`
+  width: 50%;
+  background: ${(props) => (props.background ? props.background : "#fff")};
+  padding: 0 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+`;
+
 export const VideoContainer = styled.div`
   display: "flex";
   justify-content: "center";
   align-items: "center";
   height: "100vh";
   width: "100%";
+`;
+
+export const HistoryStyled = styled.div`
+  background-image: url("/image/macayvictor-bn2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: #f3f3e5;
+  padding: 0 100px;
+`;
+
+export const HistorySubtitle = styled.h2`
+  color: #fff;
+  /* font-family: "Gowun Batang", sans-serif; */
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.5;
+  text-align: center;
+  margin-top: -5px;
+  /* margin-bottom: 150px; */
+`;
+
+export const PicturaWallpaper = styled.div`
+  background-image: ${(props) => `url(${props.url})`};
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
 `;
 
 // OLD ---------------------------------------------------
