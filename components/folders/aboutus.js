@@ -1,4 +1,5 @@
 import {
+  CarrouselContainer,
   CiezaContainer,
   CiezaText,
   CiezaWallpaper,
@@ -40,11 +41,11 @@ export const AboutUS = ({ overflowRef, isMobile }) => {
         {isMobile ? (
           <img
             className="image-center"
-            src={"/image/photo-2020.JPG"}
+            src={"/image/history-2020.jpg"}
             alt="historia 1"
           />
         ) : (
-          <PicturaWallpaper url={"/image/photo-2020.JPG"} />
+          <PicturaWallpaper url={"/image/history-2020.jpg"} />
         )}
         <CiezaText>
           <DescriptionSubtitle color="#000" style={{ fontWeight: 700 }}>
@@ -78,11 +79,11 @@ export const AboutUS = ({ overflowRef, isMobile }) => {
         {isMobile ? (
           <img
             className="image-center"
-            src={"/image/photo-2021.jpg"}
+            src={"/image/history-2021.jpg"}
             alt="historia 1"
           />
         ) : (
-          <PicturaWallpaper url={"/image/photo-2021.jpg"} />
+          <PicturaWallpaper url={"/image/history-2021.jpg"} />
         )}
       </CiezaContainer>
 
@@ -90,11 +91,11 @@ export const AboutUS = ({ overflowRef, isMobile }) => {
         {isMobile ? (
           <img
             className="image-center"
-            src={"/image/photo-2022.jpg"}
+            src={"/image/history-2022.jpg"}
             alt="historia 1"
           />
         ) : (
-          <PicturaWallpaper url={"/image/photo-2022.jpg"} />
+          <PicturaWallpaper url={"/image/history-2022.jpg"} />
         )}
         <CiezaText>
           <DescriptionSubtitle color="#000" style={{ fontWeight: 700 }}>
@@ -128,11 +129,11 @@ export const AboutUS = ({ overflowRef, isMobile }) => {
         {isMobile ? (
           <img
             className="image-center"
-            src={"/image/photo-2023.jpg"}
+            src={"/image/history-2023.jpg"}
             alt="historia 1"
           />
         ) : (
-          <PicturaWallpaper url={"/image/photo-2023.jpg"} />
+          <PicturaWallpaper url={"/image/history-2023.jpg"} />
         )}
       </CiezaContainer>
 
@@ -140,11 +141,11 @@ export const AboutUS = ({ overflowRef, isMobile }) => {
         {isMobile ? (
           <img
             className="image-center"
-            src={"/image/photo-2024.jpg"}
+            src={"/image/history-2024.jpg"}
             alt="historia 1"
           />
         ) : (
-          <PicturaWallpaper url={"/image/photo-2024.jpg"} />
+          <PicturaWallpaper url={"/image/history-2024.jpg"} />
         )}
         <CiezaText>
           <DescriptionSubtitle color="#000" style={{ fontWeight: 700 }}>
@@ -161,7 +162,37 @@ export const AboutUS = ({ overflowRef, isMobile }) => {
         </CiezaText>
       </CiezaContainer>
 
-      <YouTube background={"#dd9476"} />
+      {/* {!isMobile && (
+        <>
+        </>
+      )} */}
+      <Separator height="50px" />
+      <Title color="#6b6b6b">y muchos momentos más...</Title>
+      <Separator height="20px" />
+      <CarrouselContainer>
+        {/* <div style={{ background: "#dd9476" }}></div> */}
+        <PicturaWallpaper url={"/image/carrousel-1.jpg"} />
+        <PicturaWallpaper url={"/image/carrousel-2.JPG"} />
+        <PicturaWallpaper url={"/image/photo-2021.jpg"} />
+        <PicturaWallpaper url={"/image/carrousel-3.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-5.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-6.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-8.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-7.JPG"} />
+        {/* <div style={{ background: "#6b6b6b" }}></div> */}
+
+        <PicturaWallpaper url={"/image/carrousel-10.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-16.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-9.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-11.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-12.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-13.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-14.JPG"} />
+        <PicturaWallpaper url={"/image/carrousel-15.JPG"} />
+        {/* <div style={{ background: "#f6f6ec" }}></div> */}
+      </CarrouselContainer>
+
+      <YouTube background={"#dd9476"} text />
     </InsideModal>
   );
 };

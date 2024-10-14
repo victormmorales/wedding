@@ -1,8 +1,11 @@
-export default function YouTube({ background = "#f6f6ec" }) {
+import { Text } from "../utils/ui";
+
+export default function YouTube({ background = "#f6f6ec", text }) {
   return (
     <div
       style={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         height: "100%", // Ocupa el 100% de la altura del viewport
@@ -10,6 +13,7 @@ export default function YouTube({ background = "#f6f6ec" }) {
         background: background,
       }}
     >
+      {text && <Text color="#f6f6ec">⇩ ¡Ey! el vídeo de la pedida ⇩</Text>}
       <div
         style={{
           position: "relative",

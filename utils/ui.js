@@ -122,6 +122,16 @@ export const CiezaContainer = styled.div`
     gap: 10px;
   }
 `;
+export const CarrouselContainer = styled.div`
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  min-height: 30vh;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+`;
 
 export const CiezaWallpaper = styled.div`
   background-image: url("/image/cieza2.jpg");
@@ -171,9 +181,9 @@ export const ButtonStyled = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 `;
 
 export const ButtonContainer = styled.div`
@@ -187,7 +197,7 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) {
-    min-height: 10vh;
+    /* min-height: 50vh; */
     padding: 10px;
   }
 `;
@@ -252,6 +262,29 @@ export const PicturaWallpaper = styled.div`
   align-items: center;
   position: relative;
   text-align: center;
+`;
+
+export const ButtonSpotify = styled.button`
+  background: #1db954;
+  max-height: 5vh;
+  max-width: 50%;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    background: #67e393;
+  }
+
+  a {
+    img {
+      max-height: 5vh;
+      max-width: 60%;
+    }
+  }
 `;
 
 // OLD ---------------------------------------------------

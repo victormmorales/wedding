@@ -297,37 +297,45 @@ export default function Home() {
                   >
                     <Text>Nuestra historia</Text>
                   </ButtonRedirect>
-                  <Text color="#6b6b6b">
-                    Para conocer nuestra historia mejor 🧡
-                  </Text>
+                  {!isMobile && (
+                    <Text color="#6b6b6b">
+                      Para conocer nuestra historia mejor 🧡
+                    </Text>
+                  )}
                 </ButtonContainer>
 
                 <ButtonContainer background="#dd9476">
                   <ButtonRedirect onClick={handleOpenSpotifyModal}>
                     <Text color="#6b6b6b">Playlist</Text>
                   </ButtonRedirect>
-                  <Text color="#f6f6ec">
-                    Por si te apetece meter algo de música para el día del
-                    evento 😏
-                  </Text>
+                  {!isMobile && (
+                    <Text color="#f6f6ec">
+                      Por si te apetece meter algo de música para el día del
+                      evento 😏
+                    </Text>
+                  )}
                 </ButtonContainer>
 
                 <ButtonContainer background="#6b6b6b">
                   <ButtonRedirect>
                     <Text color="#6b6b6b">Dress code</Text>
                   </ButtonRedirect>
-                  <Text color="#f6f6ec">
-                    👗 ¡Lo guapos que vamos a ir todos! 👔
-                  </Text>
+                  {!isMobile && (
+                    <Text color="#f6f6ec">
+                      👗 ¡Lo guapos que vamos a ir todos! 👔
+                    </Text>
+                  )}
                 </ButtonContainer>
 
                 <ButtonContainer>
                   <ButtonRedirect background="#dd9476">
                     <Text color="#f6f6ec">Sitios de interes</Text>
                   </ButtonRedirect>
-                  <Text color="#6b6b6b">
-                    Algunos sitios chulos para visitar 😎
-                  </Text>
+                  {!isMobile && (
+                    <Text color="#6b6b6b">
+                      Algunos sitios chulos para visitar 😎
+                    </Text>
+                  )}
                 </ButtonContainer>
               </ButtonStyled>
             </InstructionModal>

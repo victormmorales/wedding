@@ -60,9 +60,9 @@ export default function InitialComponent({ isMobile, isClient }) {
             probar el melocotón de Cieza 🍑).
           </Text>
           <Text color="#6b6b6b">
-            Es el pueblo de origen de Maca y el mío por adopción... y como nos
-            tratan muy bien hemos decidido que era el mejor sitio para celebrar
-            nuestra boda.
+            Es el pueblo de origen de Maca y el de Víctor por adopción... y como
+            nos tratan muy bien hemos decidido que era el mejor sitio para
+            celebrar nuestra boda.
           </Text>
           {/* <Text color="#000">
                     Téneis un motón de actividades que podéis realizar y que el
