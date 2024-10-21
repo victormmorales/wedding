@@ -26,15 +26,15 @@ export const Spotify = () => {
       >
         {/* <Title color="#f6f6ec">¿Alguna canción por la cabeza?</Title> */}
         <Text color="#f6f6ec">Por si quieres añadir alguna canción 🎶</Text>
-        <ButtonSpotify>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://open.spotify.com/playlist/5PHoN3GJZGKWhpUb02pqCj?si=ahb4btNJTmqMN4xkBACeJg&pi=e-hrqln1gUQpi8&nd=1&dlsi=857ca99a15a346c4"
-          >
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://open.spotify.com/playlist/5PHoN3GJZGKWhpUb02pqCj?si=ahb4btNJTmqMN4xkBACeJg&pi=e-hrqln1gUQpi8&nd=1&dlsi=857ca99a15a346c4"
+        >
+          <ButtonSpotify>
             <img src={"/logo-spotify.png"} alt="spotify" />
-          </a>
-        </ButtonSpotify>
+          </ButtonSpotify>
+        </a>
       </div>
 
       <Frame

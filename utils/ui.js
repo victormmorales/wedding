@@ -267,23 +267,20 @@ export const PicturaWallpaper = styled.div`
 export const ButtonSpotify = styled.button`
   background: #1db954;
   max-height: 5vh;
-  max-width: 50%;
   cursor: pointer;
   margin-bottom: 20px;
   box-shadow: none;
   border: none;
-  padding: 5px 10px;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
   :hover {
     background: #67e393;
   }
 
-  a {
-    img {
-      max-height: 5vh;
-      max-width: 60%;
-    }
+  img {
+    margin: 5px 10px;
+    max-height: 5vh;
+    max-width: 60%;
   }
 `;
 
